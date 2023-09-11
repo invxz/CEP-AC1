@@ -1,0 +1,7 @@
+{
+  "name": "ViaCepApp",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

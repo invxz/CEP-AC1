@@ -1,0 +1,39 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Pesquisar CEP
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-item>
+    <ion-label position="floating">Sigla do Estado</ion-label>
+    <ion-input [(ngModel)]="estado"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="floating">Nome da Cidade</ion-label>
+    <ion-input [(ngModel)]="cidade"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="floating">Nome da Rua</ion-label>
+    <ion-input [(ngModel)]="rua"></ion-input>
+  </ion-item>
+
+
+
+  <ion-button expand="full" (click)="buscarCep()">Buscar</ion-button>
+
+
+
+  <ion-card *ngIf="cep">
+    <ion-card-header>
+      CEP Encontrado
+    </ion-card-header>
+    <ion-card-content>
+      <p><strong>CEP:</strong> {{ cep }}</p>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
